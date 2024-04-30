@@ -14,9 +14,6 @@ public class LogoutTest extends TestBase {
         navigationHelper.openLoginPage();
         navigationHelper.setPageSize();
         loginHelper.inputMailAndPasswordAndLogin(new AccountData("daniils1406@mail.ru", "Landrover2013"));
-        driver.manage().window().setSize(new Dimension(945, 1020));
-        sleep(5000);
-        driver.findElement(By.cssSelector(".quick-menu > .habitica-menu-dropdown:nth-child(3) path")).click();
-        driver.findElement(By.linkText("Выйти")).click();
+        logoutHelper.logout();
     }
 }

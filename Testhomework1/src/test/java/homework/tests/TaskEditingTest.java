@@ -9,7 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import static java.lang.Thread.sleep;
 
-public class TaskEditing extends TestBase {
+public class TaskEditingTest extends TestBase {
 
     @Test
     public void editExistenceTask() throws InterruptedException {
@@ -18,6 +18,7 @@ public class TaskEditing extends TestBase {
         loginHelper.inputMailAndPasswordAndLogin(new AccountData("daniils1406@mail.ru", "Landrover2013"));
         navigationHelper.openMainPage();
         editTask();
+        logoutHelper.logout();
     }
 
     private void editTask() throws InterruptedException {

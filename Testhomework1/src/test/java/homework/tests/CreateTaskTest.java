@@ -10,14 +10,16 @@ import static org.hamcrest.core.IsNot.not;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 
-public class CreateTask extends TestBase {
+public class CreateTaskTest extends TestBase {
     @Test
-    public void homework2() {
+    public void homework2() throws InterruptedException {
         navigationHelper.openLoginPage();
         navigationHelper.setPageSize();
         loginHelper.inputMailAndPasswordAndLogin(new AccountData("daniils1406@mail.ru", "Landrover2013"));
         navigationHelper.openMainPage();
+        sleep(5000);
         createSiteTask();
+        logoutHelper.logout();
     }
 
     private void createSiteTask(){

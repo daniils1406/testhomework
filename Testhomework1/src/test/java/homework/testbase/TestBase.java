@@ -2,6 +2,7 @@ package homework.testbase;
 
 import homework.ApplicationManager;
 import homework.helpers.LoginHelper;
+import homework.helpers.LogoutHelper;
 import homework.helpers.NavigationHelper;
 import org.junit.Before;
 import org.junit.After;
@@ -24,10 +25,13 @@ public class TestBase {
 
     protected NavigationHelper navigationHelper;
 
+    protected LogoutHelper logoutHelper;
+
     public TestBase() {
-        this.applicationManager = new ApplicationManager();
+        this.applicationManager = ApplicationManager.getInstance();
         this.loginHelper = applicationManager.getLoginHelper();
         this.navigationHelper = applicationManager.getNavigationHelper();
+        this.logoutHelper = applicationManager.getLogoutHelper();
     }
 
     @Before
@@ -37,10 +41,6 @@ public class TestBase {
         vars = applicationManager.getVars();
     }
 
-    @After
-    public void tearDown() {
-        applicationManager.quit();
-    }
 
     public class AccountData {
         private String mail;

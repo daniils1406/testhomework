@@ -1,6 +1,7 @@
 package homework;
 
 import homework.helpers.LoginHelper;
+import homework.helpers.LogoutHelper;
 import homework.helpers.NavigationHelper;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -18,17 +19,36 @@ public class ApplicationManager {
     private LoginHelper loginHelper;
     private NavigationHelper navigationHelper;
 
+    private LogoutHelper logoutHelper;
 
-    public ApplicationManager() {
-        this.driver = new ChromeDriver();
-        this.js = (JavascriptExecutor) driver;
-        this.vars = new HashMap<String, Object>();
-        this.loginHelper = new LoginHelper(this);
-        this.navigationHelper = new NavigationHelper(this,"https://habitica.com");
+    private static ThreadLocal<ApplicationManager> app = new ThreadLocal<>();
+
+    public static ApplicationManager getInstance() {
+        if (app.get() == null) {
+            ApplicationManager applicationManager = new ApplicationManager();
+            applicationManager.getNavigationHelper().openHomePage();
+            app.set(applicationManager);
+        }
+        return app.get();
     }
 
-    public void quit(){
+    private ApplicationManager() {
+        this.driver = new ChromeDriver();
+        this.js = (JavascriptExecutor) driver;
+        this.vars = new HashMap<>();
+        this.loginHelper = new LoginHelper(this);
+        this.navigationHelper = new NavigationHelper(this, "https://habitica.com");
+        this.logoutHelper = new LogoutHelper(this);
+    }
+
+    public void quit() {
         driver.quit();
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        driver.quit();
+        super.finalize();
     }
 
     public WebDriver getDriver() {
@@ -52,4 +72,7 @@ public class ApplicationManager {
     }
 
 
+    public LogoutHelper getLogoutHelper() {
+        return logoutHelper;
+    }
 }

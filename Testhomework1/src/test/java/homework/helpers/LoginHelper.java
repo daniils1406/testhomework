@@ -2,7 +2,7 @@ package homework.helpers;
 
 import homework.ApplicationManager;
 import homework.testbase.HelperBase;
-import homework.tests.AutoTestsOne;
+import homework.tests.AutoTestsOneTest;
 import org.openqa.selenium.By;
 
 public class LoginHelper extends HelperBase {
@@ -10,7 +10,7 @@ public class LoginHelper extends HelperBase {
         super(applicationManager);
     }
 
-    public void inputMailAndPasswordAndLogin(AutoTestsOne.AccountData user) {
+    public void inputMailAndPasswordAndLogin(AutoTestsOneTest.AccountData user) {
         driver.findElement(By.id("usernameInput")).sendKeys(user.getMail());
         driver.findElement(By.id("passwordInput")).sendKeys(user.getPassword());
         driver.findElement(By.id("usernameInput")).click();
