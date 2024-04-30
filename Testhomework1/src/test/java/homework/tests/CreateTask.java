@@ -13,7 +13,7 @@ import org.openqa.selenium.Dimension;
 public class CreateTask extends TestBase {
     @Test
     public void homework2() {
-        navigationHelper.openHomePage();
+        navigationHelper.openLoginPage();
         navigationHelper.setPageSize();
         loginHelper.inputMailAndPasswordAndLogin(new AccountData("daniils1406@mail.ru", "Landrover2013"));
         navigationHelper.openMainPage();
