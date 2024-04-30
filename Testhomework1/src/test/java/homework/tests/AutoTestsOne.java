@@ -8,7 +8,7 @@ public class AutoTestsOne extends TestBase {
 
     @Test
     public void userLogin() {
-        navigationHelper.openHomePage();
+        navigationHelper.openLoginPage();
         navigationHelper.setPageSize();
         loginHelper.inputMailAndPasswordAndLogin(new AccountData("daniils1406@mail.ru", "Landrover2013"));
         navigationHelper.openMainPage();

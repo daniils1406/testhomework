@@ -33,8 +33,12 @@ public class NavigationHelper extends HelperBase {
         driver.manage().window().setSize(new Dimension(945, 1020));
     }
 
-    public void openHomePage() {
+    public void openLoginPage() {
         driver.get(baseUrl + "/login");
+    }
+
+    public void openHomePage() {
+        driver.get(baseUrl + "/");
     }
 
     public String getBaseUrl() {
