@@ -5,13 +5,10 @@ import homework.helpers.LoginHelper;
 import homework.helpers.LogoutHelper;
 import homework.helpers.NavigationHelper;
 import org.junit.Before;
-import org.junit.After;
-
-
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 
-import java.util.*;
+import java.util.Map;
 
 public class TestBase {
 
