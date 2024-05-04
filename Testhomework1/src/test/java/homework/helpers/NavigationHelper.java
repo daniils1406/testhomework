@@ -1,11 +1,14 @@
 package homework.helpers;
 
 import homework.ApplicationManager;
+import homework.generator.model.HabiticaUser;
 import homework.testbase.HelperBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+
+import static java.lang.Thread.sleep;
 
 public class NavigationHelper extends HelperBase {
 
@@ -37,8 +40,11 @@ public class NavigationHelper extends HelperBase {
         driver.get(baseUrl + "/login");
     }
 
-    public void openHomePage() {
-        driver.get(baseUrl + "/");
+    public void loginAndOpenHomePage() throws InterruptedException {
+        openLoginPage();
+        applicationManager.getLoginHelper().inputMailAndPasswordAndLogin(new HabiticaUser("daniils1406@mail.ru", "Landrover2013"));
+        sleep(1000);
+        driver.get(baseUrl);
     }
 
     public String getBaseUrl() {

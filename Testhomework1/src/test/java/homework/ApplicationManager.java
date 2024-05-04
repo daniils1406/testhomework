@@ -26,7 +26,6 @@ public class ApplicationManager {
     public static ApplicationManager getInstance() {
         if (app.get() == null) {
             ApplicationManager applicationManager = new ApplicationManager();
-            applicationManager.getNavigationHelper().openHomePage();
             app.set(applicationManager);
         }
         return app.get();
@@ -39,10 +38,6 @@ public class ApplicationManager {
         this.loginHelper = new LoginHelper(this);
         this.navigationHelper = new NavigationHelper(this, "https://habitica.com");
         this.logoutHelper = new LogoutHelper(this);
-    }
-
-    public void quit() {
-        driver.quit();
     }
 
     @Override

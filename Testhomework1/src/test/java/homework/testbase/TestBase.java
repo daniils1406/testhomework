@@ -39,7 +39,7 @@ public class TestBase {
     }
 
 
-    public class AccountData {
+    public static class AccountData {
         private String mail;
         private String password;
 

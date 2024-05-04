@@ -3,8 +3,6 @@
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 _
 /src/test/java/homework/testbase/HelperBase.java,c\f\cfa9026eb29afec8c4d6365d2e868e3e489c2c82
-b
-2src/test/java/homework/tests/AutoTestsOneTest.java,6\4\64befe42a726da153c40365679c6ac37ce22066a
 `
 0src/test/java/homework/tests/CreateTaskTest.java,e\8\e8d2520f5c27ede15b1e6f56f5c1ace308385e4d
 \
@@ -18,8 +16,6 @@ d
 4src/test/java/homework/helpers/NavigationHelper.java,1\b\1bc5a9b3df17403d4a8be9e0698b0e7aa6be2372
 `
 0src/test/java/homework/tests/DeleteTaskTest.java,9\5\95f73c76f88778e56129eee1def7a3bbcba81f74
-_
-/src/test/java/homework/generator/Generator.java,1\5\156397af9fb14c17631cbe2cc6ffa68c379f3f11
 h
 8src/test/java/homework/generator/model/HabiticaTask.java,8\9\89064dfde13cd98f958bddf948350f9c6f63aa81
 f
@@ -36,3 +32,17 @@ S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
 ]
 -.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
+]
+-src/test/java/homework/testbase/AuthBase.java,d\a\da40c2a50cbdf1ea0fa60be34a458339487cce4a
+f
+6src/test/java/homework/generator/model/jaxb/Users.java,9\6\96bce15b0bc48f2345deba6428b9da9c56287b17
+h
+8src/test/java/homework/generator/model/HabiticaUser.java,8\2\820af8017b42a194e9e99fa9b3c3066443dacdcd
+[
++src/test/java/homework/tests/LoginTest.java,1\1\11a788acb4c28035c77e820e373ed6aafd4c9475
+c
+3src/test/java/homework/generator/TaskGenerator.java,6\f\6f6d38973b94f798692faa4a38ed49dce6c175bf
+d
+4src/test/java/homework/generator/model/Habitica.java,d\d\dd2be721fb1d310ea4502b752fc3270533fead0a
+_
+/src/test/java/homework/generator/Generator.java,1\5\156397af9fb14c17631cbe2cc6ffa68c379f3f11

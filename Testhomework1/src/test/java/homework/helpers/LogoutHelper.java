@@ -19,5 +19,6 @@ public class LogoutHelper extends HelperBase {
         sleep(5000);
         driver.findElement(By.cssSelector(".quick-menu > .habitica-menu-dropdown:nth-child(3) path")).click();
         driver.findElement(By.linkText("Выйти")).click();
+        applicationManager.getLoginHelper().cleanContext();
     }
 }
